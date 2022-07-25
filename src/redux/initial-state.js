@@ -1,6 +1,7 @@
-const storage = JSON.parse(localStorage.getItem('contacts'));
+// const storage = JSON.parse(localStorage.getItem('contacts'));
 
 export const initialState = {
-  items: storage ?? [],
+  // items: storage ?? [],
+  items:[],
   filter: '',
 };

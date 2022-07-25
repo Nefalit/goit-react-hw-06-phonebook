@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
@@ -14,9 +14,9 @@ const App = () => {
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    window.localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
+  // useEffect(() => {
+  //   window.localStorage.setItem('contacts', JSON.stringify(contacts));
+  // }, [contacts]);
 
   function addContact(obj) {
     if (contacts.some(el => el.name === obj.name)) {
