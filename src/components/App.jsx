@@ -21,7 +21,6 @@ const App = () => {
   function addContact(obj) {
     if (contacts.some(el => el.name === obj.name)) {
       return alert(`${obj.name} is already in contacts.`);
-      console.log("here");
     }
     dispatch(add(obj));
   }
@@ -40,6 +39,7 @@ const App = () => {
       return contacts;
     }
     const normalizeInput = filter.toLowerCase();
+    console.log('here');
     const renderArr = contacts.filter(el =>
       el.name.toLowerCase().includes(normalizeInput)
     );
