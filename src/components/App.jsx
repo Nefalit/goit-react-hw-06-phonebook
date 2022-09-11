@@ -13,7 +13,6 @@ const App = () => {
   const filter = useSelector(getFilter);
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
-  const ver = 12
 
   // useEffect(() => {
   //   window.localStorage.setItem('contacts', JSON.stringify(contacts));
@@ -22,6 +21,7 @@ const App = () => {
   function addContact(obj) {
     if (contacts.some(el => el.name === obj.name)) {
       return alert(`${obj.name} is already in contacts.`);
+      console.log("here");
     }
     dispatch(add(obj));
   }
